@@ -22,6 +22,11 @@ class CreateTransactionService {
   }: Request): Promise<Transaction> {
     const transactionsRepository = getCustomRepository(TransactionsRepository);
     const categoriesRepository = getRepository(Category);
+    const { total } = await transactionsRepository.getBalance();
+
+    if (type === 'outcome' && total < value) {
+      throw new AppError('You dont have enough balance', 400);
+    }
 
     let transactionCategory = await categoriesRepository.findOne({
       where: {
