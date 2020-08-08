@@ -1,4 +1,4 @@
-### API Node com TypeScript
+### API NodeJS com TypeScript e Postgres
 
 Aplicação desenvolvida com Node.js junto ao [TypeScript](https://www.typescriptlang.org/), utilizando o conceito de models, repositories e services (Repository Pattern). Todos os dados da aplicação estão sendo armazenados em um banco de dados [Postgres](https://www.postgresql.org/) juntamente com o [Docker](https://docs.docker.com/).
 Para facilitar a manipulação do banco de dados utilizamos o TypeORM e para realizar o envio de arquivos com o Multer.
